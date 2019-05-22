@@ -1,0 +1,427 @@
+/*! _profile.scss | efranelas | github.com/efranelas/facebook-clone */
+$sidebar-width: 36%;
+
+section.profile {
+    
+    // PAGE HEADER
+    & .profile-header {
+        position: relative;
+
+        & .profile-cover {
+            position: relative;
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            & img.cover-image {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                transition: 0.1s linear;
+                cursor: move;
+            }
+            & .cover-shade {
+                /* THE BOTTOM GRADIENT TO LET USERNAME READABLE */
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 30%;
+                background: linear-gradient(
+                    to top,
+                    rgba(0, 0, 0, 0.8),
+                    transparent
+                );
+            }
+        }
+        & .profile-thumbnail {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            padding: 1px;
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 80px;
+            transition: 0.2s linear;
+            & .thumbnail-mask {
+                border: 4px solid #fff;
+                height: 160px;
+                width: 160px;
+                margin: 0 auto;
+                border-radius: 80px;
+                overflow: hidden;
+            }
+            & img.profile-picture {
+                display: block;
+                margin: auto;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        & .profile-names {
+            position: absolute;
+            bottom: 60px;
+            left: 200px;
+            transition: 0.2s linear;
+            & a {
+                display: block;
+                font-size: 1.5rem;
+                color: #fff;
+                text-shadow: -1px -1px 1px #000, -1px 0 1px #000,
+                    -1px 1px 1px #000, 0 -1px 1px #000, 0 0 1px #000,
+                    0 1px 1px #000, 1px -1px 1px #000, 1px 0 1px #000,
+                    1px 1px 1px #000;
+                &.secondary {
+                    text-shadow: none;
+                    font-size: 1rem;
+                    color: #ddd;
+                }
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        & .profile-navbar {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-top: 0;
+            border-radius: 0 0 2px 2px;
+            &::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+            & .container {
+                float: left;
+                margin-left: 200px;
+
+                &::after {
+                    content: "";
+                    clear: both;
+                    display: table;
+                }
+                & a {
+                    position: relative;
+                    display: block;
+                    float: left;
+                    font-size: 0.85rem;
+                    font-weight: 700;
+                    color: #0b69c0;
+                    padding: 10px 15px;
+                    padding-bottom: 15px;
+                    border-left: 1px solid rgba(0, 0, 0, 0.05);
+                    &.active {
+                        color: #555;
+                        cursor: default;
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            bottom: -4px;
+                            // left: 36px;
+                            left: 50%;
+                            width: 0;
+                            height: 0;
+                            border: 6px solid $backgroundColor;
+                            border-left-color: $backgroundColor;
+                            box-shadow: -1px -1px 0 0 #ccc;
+                            transform: rotate(45deg) translateY(50%);
+                        }
+                        &:hover {
+                            background-color: transparent;
+                        }
+                    }
+                    &:hover {
+                        background-color: rgba(0, 0, 0, 0.05);
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+
+    // PAGE BODY
+    & .profile-body {
+        width: 100%;
+        background-color: transparent;
+        
+        // clearfix
+        &::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        // LEFT SIDE BAR
+        & aside.sidebar {
+            float: left;
+            width: $sidebar-width;
+            margin-top: 15px;
+            & .section {
+                margin-bottom: 15px;
+                background-color: #fff;
+                border: 1px solid #ddd;
+                border-radius: 2px;
+
+                & header {
+                    position: relative;
+                    background-color: transparent;
+                    padding: 15px 20px;
+                    height: 54px;
+                    & .badge {
+                        font-size: 1.5rem;
+                        margin-right: 5px;
+                        &.badge-intro {
+                            color: #0b69c0;
+                        }
+                        &.badge-photos {
+                            color: rgb(2, 167, 38);
+                        }
+                    }
+                    & a {
+                        position: relative;
+                        top: -3px;
+                        color: #333;
+                        font-weight: 600;
+                    }
+                    & a:hover {
+                        text-decoration: none;
+                    }
+                    & a[href]:hover {
+                        text-decoration: underline;
+                    }
+                }
+                & .content {
+                    & .row {
+                        font-size: 0.8rem;
+                        padding: 2px 10px;
+                        margin-bottom: 10px !important;
+                        color: #222;
+                        &::after {
+                            content: "";
+                            clear: both;
+                            display: table;
+                        }
+                        &.resume-container {
+                            width: 90%;
+                            margin: 0 auto;
+                            border-bottom: 1px solid #ddd;
+                            padding-bottom: 10px;
+                            margin-bottom: 5px;
+                            & .resume {
+                                padding: 0 10px;
+                                text-align: center;
+                            }
+                        }
+                        & .col {
+                            float: left;
+                            width: 90%;
+                            & a {
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+                            }
+                            &.icon {
+                                color: #999;
+                                text-align: center;
+                                width: 10%;
+                            }
+                        }
+                    }
+                }
+                &.languages .content {
+                    color: #aaa;
+                    padding: 10px;
+                    &::after {
+                        content: "";
+                        clear: both;
+                        display: table;
+                    }
+                    & .col {
+                        float: left;
+                        width: 85%;
+                        &.plus-box {
+                            line-height: 36.8px;
+                            width: 15%;
+                            background-color: rgba(0, 0, 0, 0.02);
+                            border: 1px solid #dfdfdf;
+                            text-align: center;
+                            vertical-align: middle;
+                            &:hover {
+                                background-color: rgba(0, 0, 0, 0.05);
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                    & a {
+                        display: inline-block;
+                        color: #999;
+                        font-size: 0.8rem;
+                        &:hover {
+                            text-decoration: none;
+                        }
+                        &[href] {
+                            color: $primaryColor;
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+                &.main.footer {
+                    font-size: 0.8rem;
+                    color: #aaa;
+                    background-color: transparent;
+                    border-color: transparent;
+                    & .content {
+                        padding: 0 8px;
+                    }
+                    & a {
+                        color: #777;
+                    }
+                    & .row {
+                        margin: 0;
+                        margin-top: 5px;
+                        padding: 0;
+                        color: #444;
+                    }
+                }
+            }
+        }
+
+        // POSTS SECTION
+        & main.publications {
+            float: left;
+            width: 98 - $sidebar-width; //68%;
+            margin-top: 15px;
+            margin-left: 15px;
+
+            // A SINGLE POST
+            & article {
+                margin-bottom: 15px;
+                background-color: #fff;
+                border: 1px solid #ddd;
+                border-radius: 2px;
+                & .main-section {
+                    padding: 15px;
+                    &.gallery {
+                        padding: 0;
+                        & header {
+                            padding: 15px 15px 0 15px;
+                        }
+                        & p {
+                            padding: 0 15px 10px 15px;
+                        }
+                        & img {
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+                & header {
+                    font-size: 0.8rem;
+                    margin-bottom: 5px;
+                    & .row {
+                        // border-bottom: 1px solid #ddd;
+                        // padding-bottom: 10px;
+                        // margin-bottom: 5px;
+                        &::after {
+                            content: "";
+                            clear: both;
+                            display: table;
+                        }
+                        & .col {
+                            float: left;
+                            width: 90%;
+                            height: 40px;
+                            line-height: 20px;
+                            &.profile-picture {
+                                width: 10%;
+                                & img {
+                                    display: block;
+                                    margin: 0 auto;
+                                    width: 40px;
+                                    border-radius: 20px;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                    & a {
+                        &.author {
+                            font-size: 0.9rem;
+                            font-weight: 700;
+                        }
+                        &.date {
+                            font-size: 0.8rem;
+                            color: #555;
+                        }
+                    }
+                }
+                & section.content {
+                    margin-top: 10px;
+                    color: #111;
+                    font-size: 0.95rem;
+                    p {
+                        display: block;
+                        line-height: 1.25;
+                        margin-top: 10px;
+                    }
+                }
+
+                // POST FOOTER (TODO: Comments below)
+                & footer {
+                    color: #777;
+                    font-size: 0.9rem;
+                    & .row {
+                        &.post-info {
+                            padding: 0 20px 15px;
+                        }
+                        &::after {
+                            content: "";
+                            clear: both;
+                            display: table;
+                        }
+                        & .col {
+                            float: left;
+                            width: 50%;
+                            &.right {
+                                text-align: right;
+                            }
+                        }
+                    }
+
+                    // ACTION BAR (LIKE, COMMENT, SHARE)
+                    & .buttons {
+                        border-bottom: 1px solid #ddd;
+                        padding-bottom: 3px;
+                        & .content {
+                            width: 90%;
+                            margin: 0 auto;
+                            border-top: 1px solid #ddd;
+                            padding-top: 3px;
+                            display: flex;
+                            justify-content: space-around;
+                        }
+                        & i {
+                            margin-right: 3px;
+                        }
+                        & a {
+                            display: block;
+                            width: 30%;
+                            padding: 10px 0;
+                            // line-height: 1; ** bug on button margin
+                            text-align: center;
+                            background-color: #fff;
+                            color: #777;
+                            font-weight: 700;
+                            &:hover {
+                                text-decoration: none;
+                                background-color: rgba(0, 0, 0, 0.05);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

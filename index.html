@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+
+<head>
+  <!-- /*! Author: Efranelas | MIT License | github.com/efranelas/facebook-clone | twitter.com/efranelas */-->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <link rel="shortcut icon" href="https://facebook.com/favicon.ico" />
+
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="facebook, clone, efranelas, source, code, layout, download" />
+  <meta name="description" content="A Facebook Clone - Facebook layout-like page for experience testing." />
+  <meta name="author" content="efranelas" />
+  <meta name="designer" content="efranelas" />
+  <meta name="language" content="en" />
+  <!-- opengraph -->
+  <meta property="og:title" content="Facebook Clone (by @Efranelas)">
+  <meta property="og:description" content="A Facebook Clone layout source code by Efranelas.">
+  <meta property="og:image" content="https://efranelas.github.io/facebook-clone/img/splash.png">
+  <meta property="og:image:width" content="1280">
+  <meta property="og:image:height" content="720">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Facebook Clone (by @efranelas)">
+  <meta property="og:url" content="https://efranelas.github.io/facebook-clone/index.html">
+  <!-- twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Facebook Clone by Efranelas">
+  <meta property="twitter:description" content="A Facebook Clone layout source code by Efranelas.">
+  <meta property="twitter:image" content="https://efranelas.github.io/facebook-clone/img/splash.png">
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <title>Efranelas XVI</title>
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <div class="inline logo-container">
+        <a href="/" class="inline block logo">f</a>
+      </div>
+      <div class="inline nav-form-container">
+        <form action="search.php" method="POST" class="nav_form">
+          <input class="nav_search_box" type="text" value="" placeholder="Search..." />
+          <button class="block nav_submit" type="submit" name="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+      <div class="inline nav_buttons">
+        <i class="y-divisor"></i>
+
+        <a href="#" class="button user"><i class="user-icon"></i> Efranelas</a>
+        <a href="#" class="button">Home</a>
+
+        <i class="y-divisor"></i>
+      </div>
+      <div class="inline nav_right_menu">
+        <div class="menu-container">
+          <i class="dropdown-collapser fa fa-bars block" id="dropdown-button"></i>
+          <div id="menu-dropdown">
+            <a href="#mygroups">Your Groups</a>
+            <div class="h-divisor"></div>
+            <a href="#ads">Advertising on Efranelas</a>
+            <div class="h-divisor"></div>
+            <a href="#log">Activity Log</a>
+            <a href="#settings/feed">News Feed Preferences</a>
+            <a href="#settings">Settings</a>
+            <a href="#logout">Log Out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+
+  <section class="profile">
+    <div class="container">
+
+      <div class="profile-header">
+        <div class="profile-cover">
+          <div class="cover-author">Photo by <a target="_blank" href="https://unsplash.com/photos/Ny0C6Iwou40">Lance Asper</a> on Unsplash</div>
+          <img class="cover-image" src="img/cover.jpg" />
+          <!-- Little shade to make username more readable in the background (cover image) -->
+          <div class="cover-shade"></div>
+        </div>
+
+        <div class="profile-thumbnail">
+          <div class="thumbnail-mask">
+            <div class="profile-picture">
+              <a href="#" title="Profile Picture" alt="Efranelas's Profile Picture">
+                <img src="img/user-picture-3.jpg" class="profile-picture" width="160px" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile-names">
+          <a href="#">Efranelas XVI</a>
+          <a href="#" class="secondary">(Carlos V)</a>
+        </div>
+
+        <!-- profile-tabs -->
+        <div class="profile-navbar">
+          <div class="container">
+            <a href="#" class="active">Timeline</a>
+            <a href="#">About</a>
+            <a href="#">Friends</a>
+            <a href="#">Photos</a>
+            <a href="#">More <i class="fa fa-caret-down"></i></a>
+          </div>
+        </div>
+        <!-- /profile-tabs -->
+      </div>
+
+      <div class="profile-body">
+        <aside class="sidebar">
+          <div class="section introduction">
+            <header>
+              <i class="fa fa-globe-americas badge badge-intro"></i>
+              <a>Intro</a>
+            </header>
+            <div class="content">
+              <div class="row resume-container">
+                <p class="resume">Fullstack PHP Developer, nature lover, cryptocurrency enthusiast.</p>
+              </div>
+              <div class="row">
+                <div class="col icon"><i class="fa fa-suitcase"></i></div>
+                <div class="col">
+                  Group Member at <a href="#">PHP World</a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col icon"><i class="fa fa-suitcase"></i></div>
+                <div class="col">
+                  WEB Developer at <a href="#">Freelancer</a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col icon"><i class="fa fa-graduation-cap"></i></div>
+                <div class="col">
+                  Studied at <a href="#">Internet</a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col icon"><i class="fa fa-rss"></i></div>
+                <div class="col">
+                  Followed by <a href="#">22,564 people</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section photos">
+            <header>
+              <i class="fa fa-images badge badge-photos"></i>
+              <a href="#fotos">Photos</a>
+            </header>
+            <div class="content">
+              <table cellpadding="0" cellspacing="2px">
+                <tr>
+                  <td width="33.3333%">
+                    <a href="#"><img src="img/user-picture-3.jpg" width="100%" /></a>
+                  </td>
+                  <td width="33.3333%">
+                    <a href="#"><img src="img/user-picture-3.jpg" width="100%" /></a>
+                  </td>
+                  <td width="33.3333%">
+                    <a href="#"><img src="img/user-picture-3.jpg" width="100%" /></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="33.3333%">
+                    <a href="#"><img src="img/user-picture-3.jpg" width="100%" /></a>
+                  </td>
+                  <td width="33.3333%">
+                    <a href="#"><img src="img/user-picture-3.jpg" width="100%" /></a>
+                  </td>
+                  <td width="33.3333%">
+                    <a href="#"><img src="img/user-picture-3.jpg" width="100%" /></a>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+          </div>
+
+          <div class="section languages">
+            <div class="content">
+              <div class="col">
+                <a>English (US)</a> ·
+                <a href="#">Português (Portugal)</a> ·
+                <a href="#">Português (Brasil)</a> ·
+                <a href="#">Español</a> ·
+                <a href="#">Latine</a>
+              </div>
+              <div class="col plus-box">
+                <i class="fa fa-plus"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="section main footer">
+            <footer class="main-footer">
+              <div class="content">
+                <a href="#">Privacy</a> ·
+                <a href="#">Terms</a> ·
+                <a href="#">Advertising</a> ·
+                <a href="#">Ad Choices <i class="fa fa-ad" style="font-size: 0.8rem;"></i></a> ·
+                <a href="#">Cookies</a> ·
+                <a href="#">More <i class="fa fa-caret-down" style="font-size: 0.7rem;"></i></a>
+                <div class="row copyright">Efranelas &copy; MIT License 2019</div>
+              </div>
+            </footer>
+          </div>
+        </aside>
+
+        <main class="publications">
+
+          <article class="section">
+            <div class="main-section">
+              <header>
+                <div class="row">
+                  <div class="col profile-picture">
+                    <img src="img/user-picture-3.jpg" alt="Efranelas' Profile Picture" />
+                  </div>
+                  <div class="col">
+                    <div class="row">
+                      <a href="#" class="author">Efranelas XVI</a>
+                    </div>
+                    <div class="row">
+                      <a href="#" class="date">May 17 at 1:48 PM</a>
+                    </div>
+                  </div>
+                </div>
+              </header>
+              <section class="content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                  et dolore magna aliqua. </p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat.</p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                  pariatur.</p>
+                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                  laborum.</p>
+              </section>
+            </div>
+            <footer>
+              <div class="row post-info">
+                <div class="col left">
+                  <i class="fa fa-heart" style="color: rgba(255, 0, 0, 0.8);"></i> 411
+                </div>
+                <div class="col right">
+                  19 Comments 59 Shares
+                </div>
+              </div>
+              <div class="row buttons">
+                <div class="content">
+                  <a href="#" class="button"><i class="far fa-thumbs-up"></i> Like</a>
+                  <a href="#" class="button"><i class="far fa-comment-alt"></i> Comment</a>
+                  <a href="#" class="button"><i class="far fa-paper-plane"></i> Share</a>
+                </div>
+              </div>
+
+            </footer>
+          </article>
+
+          <article class="section">
+            <div class="main-section">
+              <header>
+                <div class="row">
+                  <div class="col profile-picture">
+                    <img src="img/user-picture-3.jpg" alt="Efranelas' Profile Picture" />
+                  </div>
+                  <div class="col">
+                    <div class="row">
+                      <a href="#" class="author">Efranelas XVI</a>
+                    </div>
+                    <div class="row">
+                      <a href="#" class="date">May 13 at 1:37 PM</a>
+                    </div>
+                  </div>
+                </div>
+              </header>
+              <section class="content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                  et dolore magna aliqua. </p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat.</p>
+              </section>
+            </div>
+            <footer>
+              <div class="row post-info">
+                <div class="col left">
+                  <i class="fa fa-heart" style="color: rgba(255, 0, 0, 0.8);"></i> 305
+                </div>
+                <div class="col right">
+                  45 Comments 18 Shares
+                </div>
+              </div>
+              <div class="row buttons">
+                <div class="content">
+                  <a href="#" class="button"><i class="far fa-thumbs-up"></i> Like</a>
+                  <a href="#" class="button"><i class="far fa-comment-alt"></i> Comment</a>
+                  <a href="#" class="button"><i class="far fa-paper-plane"></i> Share</a>
+                </div>
+              </div>
+
+            </footer>
+          </article>
+
+          <article class="section">
+            <div class="main-section gallery">
+              <header>
+                <div class="row">
+                  <div class="col profile-picture">
+                    <img src="img/user-picture-3.jpg" alt="Efranelas' Profile Picture" />
+                  </div>
+                  <div class="col">
+                    <div class="row">
+                      <a href="#" class="author">Efranelas XVI</a>
+                    </div>
+                    <div class="row">
+                      <a href="#" class="date">March 5 at 2:02 PM</a>
+                    </div>
+                  </div>
+                </div>
+              </header>
+              <section class="content">
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                  et dolore magna aliqua. </p>
+                <img src="img/user-picture.png" style="width: 100%" />
+              </section>
+            </div>
+            <footer>
+              <div class="row post-info">
+                <div class="col left">
+                  <i class="fa fa-heart" style="color: rgba(255, 0, 0, 0.8);"></i> 305
+                </div>
+                <div class="col right">
+                  45 Comments 18 Shares
+                </div>
+              </div>
+              <div class="row buttons">
+                <div class="content">
+                  <a href="#" class="button"><i class="far fa-thumbs-up"></i> Like</a>
+                  <a href="#" class="button"><i class="far fa-comment-alt"></i> Comment</a>
+                  <a href="#" class="button"><i class="far fa-paper-plane"></i> Share</a>
+                </div>
+              </div>
+
+            </footer>
+          </article>
+
+        </main>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- script for cover image moving effect -->
+  <script>
+    // prevent img deslocation bug
+    document.querySelector(".profile-picture").addEventListener("dragstart", function (e) { e.preventDefault(); });
+    document.querySelector(".profile-cover").addEventListener("dragstart", function (e) { e.preventDefault(); });
+
+    // Profile header elements
+    let profileCover = document.querySelector(".cover-image"); // <img> element
+    let profileShade = document.querySelector(".cover-shade"); // shade to read the name better
+    let profilePicture = document.querySelector(".profile-thumbnail");
+    let profileNames = document.querySelector(".profile-names");
+
+    // check if there is a previous position saved or reset if there isn't
+    profileCover.style.top = localStorage.getItem("top") || "0px";
+
+    // save cover position when hit ENTER
+    window.addEventListener("keyup", function (e) {
+      if (e.keyCode === 13) {
+        console.log("salvo 111!");
+        l = true;
+        // clicar enter === salva posição
+        localStorage.setItem("top", profileCover.style.top);
+      }
+    });
+
+    /**
+      * Move a cover no eixo Y utilizando o eixo X do mouse.
+      */
+    function moveX(e) {
+
+      // disable temporary some profile items to see the cover better.
+      profileCover.style.opacity = "0.8";
+      profileNames.style.opacity = "0.3";
+      profilePicture.style.opacity = "0.3";
+      profileShade.style.display = "none";
+
+      let max = 283;
+      let percent = parseInt(17 + 100 * (e.clientX - max) / max);
+      let y = percent; //e.clientX - max;
+      if (y < 0) {
+        // travar no == top: 0px
+        profileCover.style.top = "0px";
+      }
+      else if (y > max) {
+        // travar no máximo bottom da imagem
+        profileCover.style.top = "-283px";
+      }
+      else {
+        profileCover.style.top = -y + "px";
+      }
+    }
+
+    /**
+      * Move a cover no eixo Y utilizando o eixo Y do mouse.
+      */
+    function move(e) {
+
+      // disable temporary some profile items to see the cover better.
+      profileCover.style.opacity = "0.8";
+      profileNames.style.opacity = "0.3";
+      profilePicture.style.opacity = "0.3";
+      profileShade.style.display = "none";
+
+      let y = e.clientY - (250 + 42);
+      if (y > 0) {
+        // travar no == top: 0px
+        profileCover.style.top = "0px";
+      }
+      else if (y < -283) {
+        // travar no máximo bottom da imagem
+        profileCover.style.top = "-283px";
+      }
+      else {
+        profileCover.style.top = y + "px";
+      }
+    }
+
+
+    /**
+     * ABAIXO, várias instruções, eventos e funções para:
+     * 1. Habilitar o evento de mover somente quando o usuário segurar o botao esquerdo do mouse e arrastar.
+     * 2. Controlar o cursor do mouse.
+     * 3. Remover os eventos após o uso
+     */
+
+
+    /**
+     * Chama a função que move, e muda o cursor do mouse.
+     */
+    function handleMovement(e) {
+      // Está movendo a imagem!!
+      profileCover.style.cursor = "move";
+      move(e);
+    }
+    function activateMovement(e) {
+      profileCover.addEventListener("mousemove", handleMovement, false);
+    }
+
+    // Ao clicar na cover, ativa o drag and drop.
+    profileCover.addEventListener("mousedown", activateMovement, false);
+    // Ao parar de mover a cover, deleta os eventos para não consumir memoria
+    profileCover.addEventListener("mouseup", function (e) {
+      profileCover.removeEventListener("click", activateMovement, false);
+      profileCover.removeEventListener("mousemove", handleMovement, false);
+      profileCover.style.cursor = "default";
+      profileCover.style.opacity = "1";
+      profilePicture.style.opacity = "1";
+      profileNames.style.opacity = "1";
+      profileShade.style.display = "block";
+    }, false);
+  </script>
+</body>
+
+</html>
