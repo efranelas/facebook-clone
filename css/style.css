@@ -475,6 +475,9 @@ section.profile .profile-body::after {
 }
 
 section.profile .profile-body aside.sidebar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 15px;
   float: left;
   width: 36%;
   margin-top: 15px;
