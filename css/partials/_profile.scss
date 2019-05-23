@@ -165,11 +165,14 @@ section.profile {
                 border: 1px solid #ddd;
                 border-radius: 2px;
 
+                // boxes header default
                 & header {
                     position: relative;
                     background-color: transparent;
                     padding: 15px 20px;
                     height: 54px;
+                    
+                    // icon
                     & .badge {
                         font-size: 1.5rem;
                         margin-right: 5px;
@@ -185,24 +188,44 @@ section.profile {
                         top: -3px;
                         color: #333;
                         font-weight: 600;
-                    }
-                    & a:hover {
-                        text-decoration: none;
-                    }
-                    & a[href]:hover {
-                        text-decoration: underline;
+                        &:hover {
+                            text-decoration: none;
+                        }
+                        &[href]:hover {
+                            text-decoration: underline;
+                        }
                     }
                 }
-                & .content {
+                // boxes content default
+                & .content .row {
+                    // clearfix : prevent float-columns bug
+                    &::after {
+                        content: "";
+                        clear: both;
+                        display: table;
+                    }
+                    & .col {
+                        float: left;
+                        & a:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+
+                // sidebar introduction
+                &.introduction {
                     & .row {
                         font-size: 0.8rem;
                         padding: 2px 10px;
                         margin-bottom: 10px !important;
                         color: #222;
-                        &::after {
-                            content: "";
-                            clear: both;
-                            display: table;
+                        & .col {
+                            width: 90%;
+                            &.icon {
+                                color: #999;
+                                text-align: center;
+                                width: 10%;
+                            }
                         }
                         &.resume-container {
                             width: 90%;
@@ -215,22 +238,33 @@ section.profile {
                                 text-align: center;
                             }
                         }
-                        & .col {
-                            float: left;
-                            width: 90%;
-                            & a {
-                                &:hover {
-                                    text-decoration: underline;
-                                }
-                            }
-                            &.icon {
-                                color: #999;
-                                text-align: center;
-                                width: 10%;
-                            }
-                        }
                     }
                 }
+
+                // sidebar photos
+                &.photos {
+                    $images-spacing: 6px;
+                    & .content {
+                        // background-color: #00f; // testing
+                        padding-top: $images-spacing;
+                    }
+                    & .row {
+                        width: 100%;
+                        // background-color: #f00; // testing
+                        padding-left: $images-spacing;
+                        padding-bottom: $images-spacing;
+                        & .col {
+                            padding-right: $images-spacing;
+                            width: 33.3333%;
+                        }
+                    }
+                    & img {
+                        display: block;
+                        width: 100%;
+                    }
+                }
+
+                // sidebar language switcher
                 &.languages .content {
                     color: #aaa;
                     padding: 10px;
@@ -239,37 +273,43 @@ section.profile {
                         clear: both;
                         display: table;
                     }
-                    & .col {
-                        float: left;
-                        width: 85%;
-                        &.plus-box {
-                            line-height: 36.8px;
-                            width: 15%;
-                            background-color: rgba(0, 0, 0, 0.02);
-                            border: 1px solid #dfdfdf;
-                            text-align: center;
-                            vertical-align: middle;
-                            &:hover {
-                                background-color: rgba(0, 0, 0, 0.05);
-                                cursor: pointer;
+                    & .row {
+
+                        & .col {
+                            float: left;
+                            width: 85%;
+                            &.plus-box {
+                                line-height: 36.8px;
+                                width: 15%;
+                                background-color: rgba(0, 0, 0, 0.02);
+                                border: 1px solid #dfdfdf;
+                                text-align: center;
+                                vertical-align: middle;
+                                &:hover {
+                                    background-color: rgba(0, 0, 0, 0.05);
+                                    cursor: pointer;
+                                }
                             }
                         }
-                    }
-                    & a {
-                        display: inline-block;
-                        color: #999;
-                        font-size: 0.8rem;
-                        &:hover {
-                            text-decoration: none;
-                        }
-                        &[href] {
-                            color: $primaryColor;
+                        & a {
+                            display: inline-block;
+                            color: #999;
+                            font-size: 0.8rem;
                             &:hover {
-                                text-decoration: underline;
+                                text-decoration: none;
+                            }
+                            &[href] {
+                                color: $primaryColor;
+                                &:hover {
+                                    text-decoration: underline;
+                                }
                             }
                         }
+
                     }
                 }
+                
+                // sidebar footer
                 &.main.footer {
                     font-size: 0.8rem;
                     color: #aaa;

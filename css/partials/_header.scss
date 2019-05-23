@@ -186,8 +186,6 @@ body > header {
         position: relative;
         top: 10px;
         & .menu-container {
-            // position: relative; **
-            // top: 3px; **
             & .dropdown-collapser {
                 float: right;
                 height: 22px;
@@ -220,9 +218,8 @@ body > header {
                 position: absolute;
                 visibility: hidden;
                 opacity: 0;
-                top: 32px; //35px; **
+                top: 32px;
                 right: 0;
-                // width: 113px;
                 width: 200px;
                 padding: 10px 0 5px 0;
                 background-color: #fff;
@@ -238,11 +235,10 @@ body > header {
                     width: 0;
                     height: 0;
                     top: -20px;
-                    // right: -1px; //2px;
-                    right: 2px;
+                    right: 0.5px;
                     border: 12px solid transparent;
-                    border-right-width: 10px; // remover se right: -1px
-                    border-left-width: 10px; // remover se right: -1px
+                    border-right-width: 10px;
+                    border-left-width: 10px;
                     border-bottom-color: #fff;
                 }
                 & .h-divisor {
