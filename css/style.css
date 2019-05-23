@@ -265,7 +265,7 @@ body > header .nav_right_menu .menu-container #menu-dropdown::before {
   width: 0;
   height: 0;
   top: -20px;
-  right: 2px;
+  right: 0.5px;
   border: 12px solid transparent;
   border-right-width: 10px;
   border-left-width: 10px;
@@ -525,20 +525,38 @@ section.profile .profile-body aside.sidebar .section header a[href]:hover {
   text-decoration: underline;
 }
 
-section.profile .profile-body aside.sidebar .section .content .row {
-  font-size: 0.8rem;
-  padding: 2px 10px;
-  margin-bottom: 10px !important;
-  color: #222;
-}
-
 section.profile .profile-body aside.sidebar .section .content .row::after {
   content: "";
   clear: both;
   display: table;
 }
 
-section.profile .profile-body aside.sidebar .section .content .row.resume-container {
+section.profile .profile-body aside.sidebar .section .content .row .col {
+  float: left;
+}
+
+section.profile .profile-body aside.sidebar .section .content .row .col a:hover {
+  text-decoration: underline;
+}
+
+section.profile .profile-body aside.sidebar .section.introduction .row {
+  font-size: 0.8rem;
+  padding: 2px 10px;
+  margin-bottom: 10px !important;
+  color: #222;
+}
+
+section.profile .profile-body aside.sidebar .section.introduction .row .col {
+  width: 90%;
+}
+
+section.profile .profile-body aside.sidebar .section.introduction .row .col.icon {
+  color: #999;
+  text-align: center;
+  width: 10%;
+}
+
+section.profile .profile-body aside.sidebar .section.introduction .row.resume-container {
   width: 90%;
   margin: 0 auto;
   border-bottom: 1px solid #ddd;
@@ -546,24 +564,29 @@ section.profile .profile-body aside.sidebar .section .content .row.resume-contai
   margin-bottom: 5px;
 }
 
-section.profile .profile-body aside.sidebar .section .content .row.resume-container .resume {
+section.profile .profile-body aside.sidebar .section.introduction .row.resume-container .resume {
   padding: 0 10px;
   text-align: center;
 }
 
-section.profile .profile-body aside.sidebar .section .content .row .col {
-  float: left;
-  width: 90%;
+section.profile .profile-body aside.sidebar .section.photos .content {
+  padding-top: 6px;
 }
 
-section.profile .profile-body aside.sidebar .section .content .row .col a:hover {
-  text-decoration: underline;
+section.profile .profile-body aside.sidebar .section.photos .row {
+  width: 100%;
+  padding-left: 6px;
+  padding-bottom: 6px;
 }
 
-section.profile .profile-body aside.sidebar .section .content .row .col.icon {
-  color: #999;
-  text-align: center;
-  width: 10%;
+section.profile .profile-body aside.sidebar .section.photos .row .col {
+  padding-right: 6px;
+  width: 33.3333%;
+}
+
+section.profile .profile-body aside.sidebar .section.photos img {
+  display: block;
+  width: 100%;
 }
 
 section.profile .profile-body aside.sidebar .section.languages .content {
@@ -577,12 +600,12 @@ section.profile .profile-body aside.sidebar .section.languages .content::after {
   display: table;
 }
 
-section.profile .profile-body aside.sidebar .section.languages .content .col {
+section.profile .profile-body aside.sidebar .section.languages .content .row .col {
   float: left;
   width: 85%;
 }
 
-section.profile .profile-body aside.sidebar .section.languages .content .col.plus-box {
+section.profile .profile-body aside.sidebar .section.languages .content .row .col.plus-box {
   line-height: 36.8px;
   width: 15%;
   background-color: rgba(0, 0, 0, 0.02);
@@ -591,26 +614,26 @@ section.profile .profile-body aside.sidebar .section.languages .content .col.plu
   vertical-align: middle;
 }
 
-section.profile .profile-body aside.sidebar .section.languages .content .col.plus-box:hover {
+section.profile .profile-body aside.sidebar .section.languages .content .row .col.plus-box:hover {
   background-color: rgba(0, 0, 0, 0.05);
   cursor: pointer;
 }
 
-section.profile .profile-body aside.sidebar .section.languages .content a {
+section.profile .profile-body aside.sidebar .section.languages .content .row a {
   display: inline-block;
   color: #999;
   font-size: 0.8rem;
 }
 
-section.profile .profile-body aside.sidebar .section.languages .content a:hover {
+section.profile .profile-body aside.sidebar .section.languages .content .row a:hover {
   text-decoration: none;
 }
 
-section.profile .profile-body aside.sidebar .section.languages .content a[href] {
+section.profile .profile-body aside.sidebar .section.languages .content .row a[href] {
   color: #0b69c0;
 }
 
-section.profile .profile-body aside.sidebar .section.languages .content a[href]:hover {
+section.profile .profile-body aside.sidebar .section.languages .content .row a[href]:hover {
   text-decoration: underline;
 }
 
