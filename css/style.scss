@@ -1,0 +1,50 @@
+@import "partials/variables";
+
+/*! style.scss | efranelas | github.com/efranelas/facebook-clone */
+
+body {
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    background-color: $backgroundColor;
+}
+.container {
+    // width: 738px;
+    // width: 800px;
+    // width: 851px;
+    width: 860px;
+    margin: 0 auto;
+}
+a {
+    color: $primaryColor;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+// CSS FOR HEADER
+@import "partials/header";
+// CSS FOR PROFILE PAGE
+@import "partials/profile";
+// MY CUSTOM NORMALIZE (should it be loaded after all css files? it will overwrite, will it?)
+@import "partials/normalize";
+
+
+// For cover-image credits
+.profile-cover:hover .cover-author {
+    visibility: visible;
+    opacity: 1;
+}
+.cover-author {
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    font-size: 0.6rem;
+    background-color: #fff;
+    transition: 0.3s;
+}
