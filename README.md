@@ -1,9 +1,7 @@
 # Facebook Clone
-Facebook Clone experimental layout for my portfolio.
+Just a little redesign concepts to test my scss knowledge.
 
-Finished: No.
-
-## [Open in a new tab](https://efranelas.github.io/facebook-clone/index.html)
+## [Live preview](https://efranelas.github.io/facebook-clone/index.html)
 
 ![splash.png](https://efranelas.github.io/facebook-clone/img/splash.png)
 
